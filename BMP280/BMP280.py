@@ -142,7 +142,7 @@ class BMP280(object):
 		
 	def _set_filter(self):
 		register = self._device.readU8(BMP280_FILTER_CONTROL)
-		register & 0b11100011
+		register = register & 0b11100011
 		
 		self._device.write8(BMP280_FILTER_CONTROL, register | (self._filter << 2))
 		
