@@ -224,7 +224,7 @@ class BMP280(object):
 
 	def read_altitude(self, sealevel_pa=101325.0):
 		"""Calculates the altitude in meters."""
-		temp, pressure = float(self.read_temperature_pressurepressure())
+		temp, pressure = self.read_temperature_pressure()
 		altitude = 44330.0 * (1.0 - pow(pressure / sealevel_pa, (1.0/5.255)))
 		self._logger.debug('Altitude {0} m'.format(altitude))
 		return altitude
@@ -232,7 +232,7 @@ class BMP280(object):
 	def read_sealevel_pressure(self, altitude_m=0.0):
 		"""Calculates the pressure at sealevel when given a known altitude in
 		meters. Returns a value in Pascals."""
-		pressure = float(self.read_pressure())
+		temp, pressure = self.read_temperature_pressure()
 		p0 = pressure / pow(1.0 - altitude_m/44330.0, 5.255)
 		self._logger.debug('Sealevel pressure {0} Pa'.format(p0))
 		return p0
