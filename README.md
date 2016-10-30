@@ -19,12 +19,10 @@ To install run the setup.py file.
 
 e.g. usage:
 -----------
-
-import BMP280.BMP280 as BMP280
-
-sensor=BMP280.BMP280()
-
-sensor.read_temperature_pressure()
+  
+import BMP280.BMP280 as BMP280  
+sensor=BMP280.BMP280()  
+sensor.read_temperature_pressure()  
 
 **See example file placed in ./examples/ for more guidance**
 
@@ -32,7 +30,7 @@ Options for Usage
 -----------------
 (e.g. sensor=BMP280.BMP280(modep=BMP280_LOWPOWER)  
   
-###SETTINGS FOR TEMPERATURE OVERSAMPLING  
+####SETTINGS FOR TEMPERATURE OVERSAMPLING  
 (OVER x2 SAMPLE NO USE FOR PRESSURE ACCURANCY)  
 modet=  
 BMP280_T_O1            x1  Sample  
@@ -42,7 +40,7 @@ BMP280_T_O8            x8  Sample
 BMP280_T_O16           x16 Sample  
   
   
-###PRESSURE OVERSAMPLING MODES  
+####PRESSURE OVERSAMPLING MODES  
 modep=  
 BMP280_ULTRALOWPOWER   x1  Sample  
 BMP280_LOWPOWER        x2  Sample  
@@ -51,7 +49,7 @@ BMP280_HIGHRES         x8  Sample
 BMP280_ULTRAHIGHRES    x16 Sample  
   
   
-###FILTER SETTINGS        >=75% STEP_RESPONCE AFTER SAMPLE  
+####FILTER SETTINGS        >=75% STEP_RESPONCE AFTER SAMPLE  
 BMP280_FILTER_OFF      1  
 BMP280_FILTER_2        2  
 BMP280_FILTER_4        5  
