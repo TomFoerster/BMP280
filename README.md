@@ -3,9 +3,13 @@ Python BMP280
 
 Python library for accessing temperature and pressure measurments of BMP280 chip
 
+All modes of oversampling for temperature and pressure aswell as filter settings are available via this library.
+
 Tested with Adafruit BMP280 temperature pressure sensors: https://www.adafruit.com/products/2651
 
-Code used as a base:
+Code I used as a reference developing this:
+
+https://github.com/vitally/BMP280
 
 https://github.com/gradymorgan/node-BMP280
 
