@@ -21,6 +21,8 @@ To install run the setup.py file.
 
 (e.g. sudo python setup.py install)
 
+You need to have python and python-dev installed!
+
 e.g. usage:
 -----------
   
@@ -28,12 +30,21 @@ import BMP280.BMP280 as BMP280
 sensor=BMP280.BMP280()  
 sensor.read_temperature_pressure()  
 
+Make sure you have chosen the right i2c-address
+
+If you dont use the default i2c-bus 1 you can change this by the Argument busnum=x
+
 **See example file placed in ./examples/ for more guidance**
 
 Options for Usage
 -----------------
 (e.g. sensor=BMP280.BMP280(modep=BMP280_LOWPOWER)  
-  
+
+####BMP280 default address
+BMP280_I2CADDR           0x77
+BMP280_I2CADDR2          0x76
+
+
 ####SETTINGS FOR TEMPERATURE OVERSAMPLING  
 (OVER x2 SAMPLE NO USE FOR PRESSURE ACCURANCY)  
 modet=  
